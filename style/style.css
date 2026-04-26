@@ -1,9 +1,4 @@
-/* ============================================
-   PROFESSIONAL PORTFOLIO STYLESHEET
-   Modern | Responsive | Clean Aesthetics
-   ============================================ */
 
-/* ---------- CSS RESET & BASE ---------- */
 *,
 *::before,
 *::after {
@@ -24,6 +19,25 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
 }
+.map-container {
+  margin-top: 2rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border: 1px solid #eef2ff;
+  transition: all 0.2s ease;
+}
+.map-container iframe {
+  width: 100%;
+  height: 280px;
+  display: block;
+  border: 0;
+}
+  @media (max-width: 768px) {
+    .map-container iframe {
+    height: 220px;
+    }
+  }
 
 /* ---------- TYPOGRAPHY & GLOBAL ---------- */
 .container {
@@ -599,6 +613,149 @@ img {
   border: 1px solid #eef2ff;
 }
 
+.admin {
+  background: #ffffff;
+  padding: 5rem 0;
+}
+
+.admin-panel {
+  background: white;
+  border-radius: 32px;
+  padding: 2rem;
+  border: 1px solid #eef2ff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.admin-header {
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  transition: all 0.2s;
+  border: 1px solid #e2e8f0;
+}
+
+.back-btn:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+  transform: translateX(-2px);
+}
+
+.back-btn i {
+  font-size: 0.9rem;
+}
+
+.admin-login-page .admin-note {
+  color: #475569;
+  margin-bottom: 1.5rem;
+}
+
+.admin-login-form {
+  max-width: 420px;
+  margin-bottom: 2rem;
+}
+
+.admin-login-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.admin-status {
+  color: #475569;
+  margin-bottom: 1.5rem;
+}
+
+.admin-status-error {
+  color: #dc2626;
+}
+
+.admin-content.hidden {
+  display: none;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.submission-count {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  text-align: left;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.admin-table th {
+  font-weight: 700;
+  color: #1e293b;
+  background: #f8fafc;
+}
+
+.admin-table td {
+  color: #475569;
+}
+
+.empty-state {
+  padding: 2rem;
+  text-align: center;
+  color: #64748b;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.delete-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.delete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .form-group {
   margin-bottom: 1.2rem;
 }
@@ -623,8 +780,6 @@ img {
   border-color: #3b82f6;
   box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
 }
-
-/* ---------- FOOTER ---------- */
 .footer {
   background: #0f172a;
   color: #cbd5e1;
@@ -640,8 +795,6 @@ img {
 .footer i {
   color: #ef4444;
 }
-
-/* ---------- BACK TO TOP BUTTON ---------- */
 .back-to-top {
   position: fixed;
   bottom: 2rem;
@@ -670,8 +823,6 @@ img {
   background: #2563eb;
   transform: translateY(-3px);
 }
-
-/* ---------- RESPONSIVE DESIGN ---------- */
 @media (max-width: 900px) {
   .container {
     padding: 0 1.5rem;
@@ -771,8 +922,6 @@ img {
     padding: 0.6rem 1.2rem;
   }
 }
-
-/* ---------- UTILITY & ANIMATIONS ---------- */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -787,8 +936,6 @@ img {
 .hero-content, .about-text, .stat-card, .project-card {
   animation: fadeUp 0.5s ease forwards;
 }
-
-/* Placeholder project cards (for dynamic JS) */
 .project-img {
   background: linear-gradient(135deg, #cbd5e1, #94a3b8);
   position: relative;
@@ -796,7 +943,6 @@ img {
 }
 
 .project-img::after {
-  content: "🖼️";
   position: absolute;
   top: 50%;
   left: 50%;

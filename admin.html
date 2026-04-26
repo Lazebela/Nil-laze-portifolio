@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/portfolio-sketch-neon-icon-simple-thin-line-outline-of-education-icons-for-ui-and-ux-website-or-mobile-application-isolated-on-brick-wall-vector.jpg">
+  <title>Admin Submissions | Nil Laze</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <section class="admin admin-login-page">
+    <div class="container">
+      <div class="admin-panel">
+        <div class="admin-header">
+          <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+          </a>
+        </div>
+        <h2 class="section-title">Admin <span class="highlight">Login</span></h2>
+        <p class="admin-note">This page is not linked publicly. Enter your admin key to view saved contact submissions.</p>
+        <form id="adminLoginForm" class="admin-login-form">
+          <div class="form-group">
+            <input type="password" id="adminKey" placeholder="Admin key" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Unlock Submissions</button>
+        </form>
+        <div id="adminStatus" class="admin-status"></div>
+
+        <div id="adminContent" class="admin-content hidden">
+          <div class="admin-actions">
+            <span id="submissionCount" class="submission-count">No submissions loaded yet.</span>
+          </div>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Subject</th>
+                  <th>Message</th>
+                  <th>Received</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="submissionsBody">
+                <tr><td colspan="7" class="empty-state">Authorize first to view saved submissions.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script/admin.js"></script>
+</body>
+</html>
